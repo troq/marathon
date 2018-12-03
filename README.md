@@ -1,13 +1,6 @@
-# News Feed Eradicator
+# Marathon
 
-A browser extension that deletes your Facebook news feed
-and replaces it with a nice quote.
-
-[Install Chrome Extension](https://chrome.google.com/webstore/detail/news-feed-eradicator-for/fjcldmjmjhkklehbacihaiopjklihlgg?hl=en)
-
-[Install Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/news-feed-eradicator/)
-
-![Screenshot](https://raw.githubusercontent.com/jordwest/news-feed-eradicator/master/assets/screenshot.jpg)
+A browser extension that's built for long-term productivity.
 
 ## Development
 

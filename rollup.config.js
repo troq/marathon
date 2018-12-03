@@ -21,6 +21,23 @@ const eradicate = {
 	],
 };
 
+const eradicateReddit = {
+	input: 'src/eradicateReddit.ts',
+	output: {
+		file: 'build/eradicateReddit.js',
+		format: 'iife',
+	},
+	plugins: [
+		resolve(),
+		commonjs(),
+		typescript(),
+		css({ output: 'build/eradicate.css' }),
+		replace({
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+		}),
+	],
+};
+
 const intercept = {
 	input: 'src/intercept.ts',
 	output: {
@@ -30,4 +47,4 @@ const intercept = {
 	plugins: [typescript()],
 };
 
-export default [eradicate, intercept];
+export default [eradicate, intercept, eradicateReddit];

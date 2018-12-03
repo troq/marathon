@@ -240,3 +240,11 @@ div.ego_column,
 	opacity: 0 !important;
 	pointer-events: none !important;
 }
+
+div[id='2x-container'] {
+	opacity: 0;
+}
+
+div[id='secondary-inner'], div[id='page-manager'] {
+  opacity: 0;
+}

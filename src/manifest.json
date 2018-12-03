@@ -1,19 +1,21 @@
 {
-	"name": "News Feed Eradicator for Facebook",
-	"version": "1.2.1",
-	"description": "Find yourself spending too much time on Facebook? Eradicate distractions by replacing your entire news feed with an inspiring quote",
+	"name": "Marathon",
+	"version": "0.1",
+	"description": "Chrome extension with the goal of maximizing productivity over the long term, with sprints.",
 	"manifest_version": 2,
 	"permissions": [
 		"storage",
 		"http://www.facebook.com/*",
 		"https://www.facebook.com/*",
 		"http://web.facebook.com/*",
-		"https://web.facebook.com/*"
+		"https://web.facebook.com/*",
+    "http://www.reddit.com/*",
+    "https://www.reddit.com/*"
 	],
 	"icons": {
-		"16": "icon16.jpg",
-		"48": "icon48.jpg",
-		"128": "icon128.jpg"
+		"16": "icon-16.png",
+		"64": "icon-64.png",
+		"128": "icon-128.png"
 	},
 	"content_scripts": [
 		{
@@ -21,7 +23,9 @@
 				"http://www.facebook.com/*",
 				"https://www.facebook.com/*",
 				"http://web.facebook.com/*",
-				"https://web.facebook.com/*"
+				"https://web.facebook.com/*",
+				"http://www.reddit.com/*",
+				"https://www.reddit.com/*"
 			],
 			"js": ["intercept.js"],
 			"css": ["eradicate.css"],
@@ -35,6 +39,15 @@
 				"https://web.facebook.com/*"
 			],
 			"js": ["eradicate.js"],
+			"css": ["eradicate.css"],
+			"run_at": "document_idle"
+		},
+		{
+			"matches": [
+				"http://www.reddit.com/*",
+				"https://www.reddit.com/*"
+			],
+			"js": ["eradicateReddit.js"],
 			"css": ["eradicate.css"],
 			"run_at": "document_idle"
 		}
