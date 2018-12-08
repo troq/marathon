@@ -1,7 +1,7 @@
 {
 	"name": "Marathon",
-	"version": "0.1",
-	"description": "Chrome extension with the goal of maximizing productivity over the long term, with sprints.",
+	"version": "0.0.1",
+	"description": "Chrome extension that's built for long-term productivity",
 	"manifest_version": 2,
 	"permissions": [
 		"storage",

@@ -19,3 +19,12 @@ To build a distributable `.zip` for production, just run:
     make
 
 The extension package can be found in the `dist` folder.
+
+## Todo
+[] Block youtube recommended section
+
+[] Conditional blocking based on time (i.e. allow reddit on weekends)
+
+## Credits
+
+Forked from [jordwest/news-feed-erasdicator](https://github.com/jordwest/news-feed-eradicator)
