@@ -8,7 +8,7 @@ build: install copy-assets
 	mkdir -p build
 	NODE_ENV=production ./node_modules/.bin/rollup -c
 	mkdir -p dist
-	(cd build && zip -r ../dist/NewsFeedEradicator_$(GITTAG).zip .)
+	(cd build && zip -r ../dist/Marathon_$(GITTAG).zip .)
 
 copy-assets:
 	mkdir -p build

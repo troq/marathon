@@ -22,7 +22,7 @@ const NewsFeedEradicator = (store: Store) => {
 
 	const onShowInfoPanel = () => store.dispatch(showInfoPanel());
 	const link = h('a.nfe-info-link', { on: { click: onShowInfoPanel } }, [
-		h('span', 'News Feed Eradicator'),
+		h('span', 'Marathon'),
 		newFeatureLabel,
 	]);
 

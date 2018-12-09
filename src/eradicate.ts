@@ -23,7 +23,7 @@ var eradicateRetry = setInterval(function() {
 
 	removeNewsFeed();
 
-	// Add News Feed Eradicator quote/info panel
+	// Add Marathon quote/info panel
 	if (!isAlreadyInjected()) {
 		injectUI(streamContainer);
 	}

@@ -1,11 +1,10 @@
 {
-	"name": "news-feed-eradicator",
-	"title": "News Feed Eradicator for Facebook",
-	"id": "jid1-oWTXWc3MRzRuiQ",
-	"description": "Find yourself spending too much time on Facebook? Eradicate distractions by replacing your entire news feed with an inspiring quote",
+	"name": "Marathon",
+	"title": "Marathon productivity extension",
+	"description": "Chrome extension that's built for long-term productivity",
 	"author": "Jordan West",
 	"license": "MIT",
-	"version": "1.2.1",
+	"version": "0.0.1",
 	"devDependencies": {
 		"prettier": "1.14.3",
 		"redux": "^3.5.2",
