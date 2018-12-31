@@ -179,6 +179,51 @@ const error = (state: string = '', action) => {
 	return state;
 };
 
+type Hour = 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23;
+enum Weekday {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
+enum Site {FACEBOOK = 'FACEBOOK', REDDIT = 'REDDIT'};
+
+export interface DaySettings {
+  flexStart: Hour;
+  flexMinutes: number;
+  cheatMinutes: number;
+}
+
+export interface SiteSettings {
+  [key: Site]: WeekSettings;
+}
+
+export interface WeekSettings {
+  [key: Weekday]: DaySettings;
+}
+
+function weekSettings(state: WeekSettings = {}, action): WeekSettings {
+	switch (action.type) {
+		case 'WEEK_SETTINGS_EDIT':
+			switch (action.action.type) {
+				case 'SET_DAY_SETTINGS':
+          return {
+            ...state,
+            [action.action.day]: action.action.settings,
+          };
+				case 'RESET_DAY_SETTINGS':
+          return {
+            ...state,
+            [action.action.day]: null,
+          };
+			}
+	}
+	return state;
+}
+
+function siteSettings(state: SiteSettings = {}, action): SiteSettings {
+  switch (action.type) {
+    case 'WEEK_SETTINGS_EDIT':
+      return { ...state, [action.action.site]: weekSettings(state[action.action.site], action) };
+  }
+  return state;
+}
+
 export interface IState {
 	showQuotes: boolean;
 	builtinQuotesEnabled: boolean;
@@ -194,6 +239,7 @@ export interface IState {
 	isEditingQuote: boolean;
 	isEditingBulk: boolean;
 	error: string;
+  siteSettings: SiteSettings;
 }
 
 export default combineReducers({
@@ -211,4 +257,5 @@ export default combineReducers({
 	isEditingQuote,
 	isEditingBulk,
 	error,
+  siteSettings,
 });

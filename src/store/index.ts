@@ -32,7 +32,7 @@ export function createStore(): Promise<Store> {
 			const store = createReduxStore(
 				rootReducer,
 				initialState,
-				applyMiddleware(thunk)
+				applyMiddleware(thunk),
 			);
 
 			store.dispatch(selectNewQuote());

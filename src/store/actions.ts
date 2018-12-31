@@ -153,6 +153,20 @@ export function selectNewQuote() {
 	};
 }
 
+export function setDaySettings(site, day, settings) {
+  return {
+    type: 'WEEK_SETTINGS_EDIT',
+    action: { type: 'SET_DAY_SETTINGS', site, day, settings },
+  }
+}
+
+export function resetDaySettings(site, day) {
+  return {
+    type: 'WEEK_SETTINGS_EDIT',
+    action: { type: 'RESET_DAY_SETTINGS', site, day },
+  }
+}
+
 export function setQuoteText(text): QUOTE_EDIT {
 	return {
 		type: 'QUOTE_EDIT',
