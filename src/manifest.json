@@ -51,5 +51,9 @@
 			"css": ["eradicate.css"],
 			"run_at": "document_idle"
 		}
-	]
+	],
+  "browser_action": {
+    "default_title": "Marathon",
+    "default_popup": "popup.html"
+  }
 }

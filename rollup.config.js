@@ -3,6 +3,60 @@ import css from 'rollup-plugin-css-only';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
+import babel from 'rollup-plugin-babel';
+
+const settings = {
+	input: 'src/settings.js',
+	output: {
+		file: 'build/settings.js',
+		format: 'iife',
+	},
+	plugins: [
+    resolve(),
+    commonjs({
+      include: 'node_modules/**',
+      namedExports: {
+        'node_modules/react/index.js': ['Component', 'PureComponent', 'Fragment', 'Children', 'createElement'],
+        'node_modules/react-is/index.js': ['isValidElementType'],
+      },
+    }),
+    typescript(),
+    babel({
+      exclude: 'node_modules/**',
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            "targets": "last 2 Chrome versions",
+            "modules": false,
+          },
+        ],
+        '@babel/react',
+      ],
+    }),
+		css({ output: 'build/settings.css' }),
+		replace({
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+		}),
+	],
+};
+
+const popup = {
+	input: 'src/popup.ts',
+	output: {
+		file: 'build/popup.js',
+		format: 'iife',
+	},
+	plugins: [
+		resolve(),
+		commonjs(),
+		typescript(),
+		css({ output: 'build/popup.css' }),
+		replace({
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+		}),
+	],
+};
 
 const eradicate = {
 	input: 'src/eradicate.ts',
@@ -47,4 +101,4 @@ const intercept = {
 	plugins: [typescript()],
 };
 
-export default [eradicate, intercept, eradicateReddit];
+export default [settings, eradicate, intercept, eradicateReddit, popup];

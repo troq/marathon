@@ -13,6 +13,7 @@ build: install copy-assets
 copy-assets:
 	mkdir -p build
 	cp src/manifest.json build/manifest.json
+	cp src/*.html build
 	cp assets/icon-16.png build/icon-16.png
 	cp assets/icon-64.png build/icon-64.png
 	cp assets/icon-128.png build/icon-128.png
