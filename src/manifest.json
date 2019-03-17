@@ -33,6 +33,14 @@
 			],
 			"js": ["eradicateReddit.bundle.js"],
 			"run_at": "document_idle"
+		},
+		{
+			"matches": [
+				"https://news.ycombinator.com/"
+			],
+			"js": ["eradicateHN.bundle.js"],
+			"css": ["eradicateHN.css"],
+			"run_at": "document_idle"
 		}
 	]
 }

@@ -1,0 +1,21 @@
+.nfe-quote {
+	position: relative;
+	font-size: 14px;
+}
+
+.nfe-quote-text {
+	color: #000;
+	border-left: 4px solid #99f;
+	margin-left: 15px;
+	padding-left: 15px;
+	width: 87.5%;
+}
+
+.nfe-quote-source {
+	color: #999;
+}
+
+/* For HN */
+#hnmain .itemlist tbody {
+  display: none;
+}

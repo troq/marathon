@@ -24,6 +24,7 @@ var options = {
     intercept: path.join(__dirname, "src", "js", "intercept.js"),
     eradicate: path.join(__dirname, "src", "js", "eradicate.js"),
     eradicateReddit: path.join(__dirname, "src", "js", "eradicateReddit.js"),
+    eradicateHN: path.join(__dirname, "src", "js", "eradicateHN.js"),
   },
   output: {
     path: path.join(__dirname, "build"),
@@ -58,7 +59,7 @@ var options = {
     new webpack.EnvironmentPlugin(["NODE_ENV"]),
     new CopyWebpackPlugin([
       "src/img",
-      "src/css/eradicate.css",
+      "src/css",
       {
         from: "src/manifest.json",
         transform: function (content, path) {
