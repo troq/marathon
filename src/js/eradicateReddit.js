@@ -1,5 +1,5 @@
 import removeRedditFeed from './lib/remove-reddit-feed';
-import injectUI, { isAlreadyInjected } from './lib/inject-ui';
+import injectUI from './lib/inject-ui';
 // import isEnabled from './lib/is-enabled';
 import getFeedContainer from './lib/get-feed-container';
 

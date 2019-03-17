@@ -8,7 +8,8 @@
   "manifest_version": 2,
   "permissions": [
 		"https://www.facebook.com/*",
-    "https://www.reddit.com/*"
+    "https://www.reddit.com/*",
+    "https://mobile.twitter.com/*"
   ],
 	"content_scripts": [
 		{
@@ -39,7 +40,15 @@
 				"https://news.ycombinator.com/"
 			],
 			"js": ["eradicateHN.bundle.js"],
-			"css": ["eradicateHN.css"],
+			"css": ["eradicate.css", "eradicateHN.css"],
+			"run_at": "document_idle"
+		},
+		{
+			"matches": [
+				"https://mobile.twitter.com/home"
+			],
+			"js": ["eradicateTwitter.bundle.js"],
+			"css": ["eradicate.css", "eradicateTwitter.css"],
 			"run_at": "document_idle"
 		}
 	]
