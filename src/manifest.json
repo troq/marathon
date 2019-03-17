@@ -26,7 +26,13 @@
 				"https://www.facebook.com/*"
 			],
 			"js": ["eradicate.bundle.js"],
-			"css": ["eradicate.css"],
+			"run_at": "document_idle"
+		},
+		{
+			"matches": [
+				"https://www.reddit.com/*"
+			],
+			"js": ["eradicateReddit.bundle.js"],
 			"run_at": "document_idle"
 		}
 	]

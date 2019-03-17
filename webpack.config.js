@@ -23,6 +23,7 @@ var options = {
   entry: {
     intercept: path.join(__dirname, "src", "js", "intercept.js"),
     eradicate: path.join(__dirname, "src", "js", "eradicate.js"),
+    eradicateReddit: path.join(__dirname, "src", "js", "eradicateReddit.js"),
   },
   output: {
     path: path.join(__dirname, "build"),
