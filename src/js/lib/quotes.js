@@ -1,4 +1,4 @@
-export const BuiltinQuotes = [
+export default [
 	{
 		id: 1,
 		text:

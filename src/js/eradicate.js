@@ -1,6 +1,3 @@
-// Load any browser specific code. This is selected by webpack
-import * as browser from './webextension';
-
 import removeNewsFeed from './lib/remove-news-feed';
 import injectUI, { isAlreadyInjected } from './lib/inject-ui';
 import isEnabled from './lib/is-enabled';

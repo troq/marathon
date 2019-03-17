@@ -1,6 +1,3 @@
-// Load any browser specific code. This is selected by webpack
-import * as browser from './webextension';
-
 import removeRedditFeed from './lib/remove-reddit-feed';
 import injectUI, { isAlreadyInjected } from './lib/inject-ui';
 // import isEnabled from './lib/is-enabled';
