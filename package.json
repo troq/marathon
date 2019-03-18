@@ -1,6 +1,6 @@
 {
-  "name": "ironman",
-  "version": "0.0.1",
+  "name": "marathon",
+  "version": "0.0.2",
   "description": "Chrome extension that's built for long-term productivity",
   "scripts": {
     "build": "node utils/build.js",
@@ -19,10 +19,5 @@
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "3.1.14",
     "write-file-webpack-plugin": "4.5.0"
-  },
-  "dependencies": {
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0",
-    "snabbdom": "^0.7.3"
   }
 }

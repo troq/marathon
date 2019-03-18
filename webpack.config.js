@@ -27,6 +27,9 @@ var options = {
     eradicateHN: path.join(__dirname, "src", "js", "eradicateHN.js"),
     eradicateTwitter: path.join(__dirname, "src", "js", "eradicateTwitter.js"),
   },
+  chromeExtensionBoilerplate: {
+    notHotReload: ["intercept", "eradicate", "eradicateReddit", "eradicateHN", "eradicateTwitter"]
+  },
   output: {
     path: path.join(__dirname, "build"),
     filename: "[name].bundle.js"
