@@ -37,7 +37,8 @@
 		},
 		{
 			"matches": [
-				"https://news.ycombinator.com/"
+				"https://news.ycombinator.com/",
+				"https://news.ycombinator.com/news"
 			],
 			"js": ["eradicateHN.bundle.js"],
 			"css": ["eradicate.css", "eradicateHN.css"],
