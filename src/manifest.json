@@ -46,7 +46,7 @@
 		},
 		{
 			"matches": [
-				"https://mobile.twitter.com/home"
+				"https://mobile.twitter.com/*"
 			],
 			"js": ["eradicateTwitter.bundle.js"],
 			"css": ["eradicate.css", "eradicateTwitter.css"],
